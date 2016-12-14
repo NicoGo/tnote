@@ -1,0 +1,11 @@
+ffdc  origine
+ffdc  debut d'execution
+2000   emplacement : 65500  (0xffdc)  ligne n° 10	LDQ 0,R0
+226f   emplacement : 65502  (0xffde)  ligne n° 11	LDQ 0x006F,R2
+3010   emplacement : 65504  (0xffe0)  ligne n° 14		ADQ PAS,R0
+4f20   emplacement : 65506  (0xffe2)  ligne n° 15		CMP R2,R0
+0480   emplacement : 65508  (0xffe4)  ligne n° 16		JGE #MAIN_PRGA-$-2 // Jump
+fffa   emplacement : 65510  (0xffe6) 
+2000   emplacement : 65512  (0xffe8)  ligne n° 17		LDQ 0x0000,R0  
+0180   emplacement : 65514  (0xffea)  ligne n° 18		JMP #MAIN_PRGA-$-2 // Jump
+fff4   emplacement : 65516  (0xffec) 

@@ -1,0 +1,5 @@
+set tabstop=16
+" when indenting with '>', use 16 spaces width
+set shiftwidth=16
+" On pressing tab, insert 16 spaces
+set expandtab

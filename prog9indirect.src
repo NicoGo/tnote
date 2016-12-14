@@ -1,0 +1,19 @@
+SEUIL EQU 3
+INA EQU 0xFFA0
+OUTA EQU 0xFFA2
+LOADA EQU 0xFFDC
+
+ORG LOADA
+START LOADA
+
+DEBUT	LDW R2,@INA // On charge x dans r2
+	JSR @DISTA	
+	JMP #DEBUT-$-2 // Jump
+
+DISTA   LDW R1,#SEUIL //On stocke seuil
+        SUB R2,R1,R0 //R1-R2
+        JGE #POSIT-$-2 // Si le resultat est negatif alors complement à 2
+        NEG R0,R0 // -> NEGATION
+POSIT   SRA R0,R0 // Shift Right
+	STW R0,@OUTA // Ecriture
+	RTS

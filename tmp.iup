@@ -1,20 +1,20 @@
 ffc0  origine
 ffc0  debut d'execution
-2000   emplacement : 65472  (0xffc0)  ligne n° 9	MAIN_PRGA	LDQ 0,R0
-216f   emplacement : 65474  (0xffc2)  ligne n° 10		LDQ 0x006F,R1
-6050   emplacement : 65476  (0xffc4)  ligne n° 11		STW R0,@CNTMA
+2000   emplacement : 65472  (0xffc0)  ligne n° 8	MAIN_PRGA	LDQ 0,R0
+216f   emplacement : 65474  (0xffc2)  ligne n° 9		LDQ 0x006F,R1
+6050   emplacement : 65476  (0xffc4)  ligne n° 10		STW R0,@CNTMA
 ff00   emplacement : 65478  (0xffc6) 
-0a50   emplacement : 65480  (0xffc8)  ligne n° 12	LOOP	JSR @ADDIT	
+0a50   emplacement : 65480  (0xffc8)  ligne n° 11	FUNC	JSR @AJOUT	
 ffdc   emplacement : 65482  (0xffca) 
-4f0e   emplacement : 65484  (0xffcc)  ligne n° 13		CMP R0,R14
-0480   emplacement : 65486  (0xffce)  ligne n° 14		JGE #MAIN_PRGA-$-2	
+4f0e   emplacement : 65484  (0xffcc)  ligne n° 12		CMP R0,R14
+0480   emplacement : 65486  (0xffce)  ligne n° 13		JGE #MAIN_PRGA-$-2	
 fff0   emplacement : 65488  (0xffd0) 
-6050   emplacement : 65490  (0xffd2)  ligne n° 15		STW R0,@CNTMA
+6050   emplacement : 65490  (0xffd2)  ligne n° 14		STW R0,@CNTMA
 ff00   emplacement : 65492  (0xffd4) 
-4f0e   emplacement : 65494  (0xffd6)  ligne n° 16		CMP R0,R14
-0180   emplacement : 65496  (0xffd8)  ligne n° 17		JMP#LOOP-$-2
+4f0e   emplacement : 65494  (0xffd6)  ligne n° 15		CMP R0,R14
+0180   emplacement : 65496  (0xffd8)  ligne n° 16		JMP#FUNC-$-2
 ffee   emplacement : 65498  (0xffda) 
-60d0   emplacement : 65500  (0xffdc)  ligne n° 19	ADDIT	LDW R0,@CNTMA
+60d0   emplacement : 65500  (0xffdc)  ligne n° 18	AJOUT	LDW R0,@CNTMA
 ff00   emplacement : 65502  (0xffde) 
-3010   emplacement : 65504  (0xffe0)  ligne n° 20		ADQ 16,R0
-0200   emplacement : 65506  (0xffe2)  ligne n° 21		RTS
+3010   emplacement : 65504  (0xffe0)  ligne n° 19		ADQ 16,R0
+0200   emplacement : 65506  (0xffe2)  ligne n° 20		RTS

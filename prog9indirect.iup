@@ -1,24 +1,20 @@
-ffdc  origine
-ffdc  debut d'execution
-2000   emplacement : 65500  (0xffdc)  ligne n° 10	LDQ 0,R0 // ligne 1
-226f   emplacement : 65502  (0xffde)  ligne n° 11	LDQ SEUIL,R2 // ligne 2
-6050   emplacement : 65504  (0xffe0)  ligne n° 12	STW R0,@CNTMA
-ff00   emplacement : 65506  (0xffe2) 
-2000   emplacement : 65508  (0xffe4)  ligne n° 15		LDQ 0,R0
-3010   emplacement : 65510  (0xffe6)  ligne n° 16		ADQ PAS,R0
-6050   emplacement : 65512  (0xffe8)  ligne n° 17	        STW R0,@CNTMA	
-ff00   emplacement : 65514  (0xffea) 
-0a50   emplacement : 65516  (0xffec)  ligne n° 18	BOUCLE	JSR @FONCTION // on fait les additionb
-10000   emplacement : 65518  (0xffee) 
-4f02   emplacement : 65520  (0xfff0)  ligne n° 19		CMP R0,R2
-0480   emplacement : 65522  (0xfff2)  ligne n° 20		JGE #MAIN_PRGA-$-2 // Jump
-fff0   emplacement : 65524  (0xfff4) 
-6050   emplacement : 65526  (0xfff6)  ligne n° 21		STW R0,@CNTMA 
-ff00   emplacement : 65528  (0xfff8) 
-6012   emplacement : 65530  (0xfffa)  ligne n° 22		STW R0,R2
-0180   emplacement : 65532  (0xfffc)  ligne n° 23		JMP #MAIN_PRGA-$-2 // Jump
-ffe6   emplacement : 65534  (0xfffe) 
-60d0   emplacement : 65536  (0x10000)  ligne n° 25	FONCTION LDW R0,@CNTMA
-ff00   emplacement : 65538  (0x10002) 
-3010   emplacement : 65540  (0x10004)  ligne n° 26		 ADQ 16,R0
-0200   emplacement : 65542  (0x10006)  ligne n° 27		 RTS
+ff10  origine
+ff10  debut d'execution
+2000   emplacement : 65296  (0xff10)  ligne n° 12	  LDQ 0,R0
+226f   emplacement : 65298  (0xff12)  ligne n° 13	  LDQ SEUIL,R2
+6050   emplacement : 65300  (0xff14)  ligne n° 14	  STW R0,@CNTMA
+ff00   emplacement : 65302  (0xff16) 
+0a50   emplacement : 65304  (0xff18)  ligne n° 16	BOUCLE	JSR @FONCTION // on fait les additions
+ff2c   emplacement : 65306  (0xff1a) 
+4f02   emplacement : 65308  (0xff1c)  ligne n° 17		CMP R0,R2
+0480   emplacement : 65310  (0xff1e)  ligne n° 18		JGE #BOUCLE-$-2 // Jump
+fff8   emplacement : 65312  (0xff20) 
+6050   emplacement : 65314  (0xff22)  ligne n° 19		STW R0,@CNTMA
+ff00   emplacement : 65316  (0xff24) 
+6012   emplacement : 65318  (0xff26)  ligne n° 20		STW R0,R2
+0180   emplacement : 65320  (0xff28)  ligne n° 21		JMP #BOUCLE-$-2 // Jump
+ffee   emplacement : 65322  (0xff2a) 
+60d0   emplacement : 65324  (0xff2c)  ligne n° 23	FONCTION LDW R0,@CNTMA
+ff00   emplacement : 65326  (0xff2e) 
+3010   emplacement : 65328  (0xff30)  ligne n° 24		 ADQ 16,R0
+0200   emplacement : 65330  (0xff32)  ligne n° 25		 RTS

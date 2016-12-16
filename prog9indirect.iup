@@ -2,19 +2,18 @@ ff10  origine
 ff10  debut d'execution
 2000   emplacement : 65296  (0xff10)  ligne n° 12	  LDQ 0,R0
 226f   emplacement : 65298  (0xff12)  ligne n° 13	  LDQ SEUIL,R2
-6050   emplacement : 65300  (0xff14)  ligne n° 14	  STW R0,@CNTMA
+6050   emplacement : 65300  (0xff14)  ligne n° 16	  STW R0,@CNTMA
 ff00   emplacement : 65302  (0xff16) 
-0a50   emplacement : 65304  (0xff18)  ligne n° 16	BOUCLE	JSR @FONCTION // on fait les additions
-ff2c   emplacement : 65306  (0xff1a) 
-4f02   emplacement : 65308  (0xff1c)  ligne n° 17		CMP R0,R2
-0480   emplacement : 65310  (0xff1e)  ligne n° 18		JGE #BOUCLE-$-2 // Jump
-fff8   emplacement : 65312  (0xff20) 
-6050   emplacement : 65314  (0xff22)  ligne n° 19		STW R0,@CNTMA
-ff00   emplacement : 65316  (0xff24) 
-6012   emplacement : 65318  (0xff26)  ligne n° 20		STW R0,R2
-0180   emplacement : 65320  (0xff28)  ligne n° 21		JMP #BOUCLE-$-2 // Jump
-ffee   emplacement : 65322  (0xff2a) 
-60d0   emplacement : 65324  (0xff2c)  ligne n° 23	FONCTION LDW R0,@CNTMA
-ff00   emplacement : 65326  (0xff2e) 
-3010   emplacement : 65328  (0xff30)  ligne n° 24		 ADQ 16,R0
-0200   emplacement : 65330  (0xff32)  ligne n° 25		 RTS
+60d0   emplacement : 65304  (0xff18)  ligne n° 17	  LDW R0,@CNTMA
+ff00   emplacement : 65306  (0xff1a) 
+3010   emplacement : 65308  (0xff1c)  ligne n° 18		ADQ 16,R0
+4f20   emplacement : 65310  (0xff1e)  ligne n° 19		CMP R2,R0
+0480   emplacement : 65312  (0xff20)  ligne n° 20		JGE #BOUCLE-$-2 // Jump
+fff2   emplacement : 65314  (0xff22) 
+2000   emplacement : 65316  (0xff24)  ligne n° 21		LDQ 0x0000,R0
+6050   emplacement : 65318  (0xff26)  ligne n° 22		STW R0,@CNTMA
+ff00   emplacement : 65320  (0xff28) 
+0180   emplacement : 65322  (0xff2a)  ligne n° 23		JMP #BOUCLE-$-2 // Jump
+ffe8   emplacement : 65324  (0xff2c) 
+0950   emplacement : 65326  (0xff2e)  ligne n° 24	  JEA @MAIN_PRGA
+ff10   emplacement : 65328  (0xff30) 

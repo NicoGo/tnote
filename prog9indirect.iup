@@ -1,19 +1,36 @@
 ff10  origine
 ff10  debut d'execution
-2000   emplacement : 65296  (0xff10)  ligne n° 12	  LDQ 0,R0
-226f   emplacement : 65298  (0xff12)  ligne n° 13	  LDQ SEUIL,R2
-6050   emplacement : 65300  (0xff14)  ligne n° 16	  STW R0,@CNTMA
-ff00   emplacement : 65302  (0xff16) 
-60d0   emplacement : 65304  (0xff18)  ligne n° 17	  LDW R0,@CNTMA
-ff00   emplacement : 65306  (0xff1a) 
-3010   emplacement : 65308  (0xff1c)  ligne n° 18		ADQ 16,R0
-4f20   emplacement : 65310  (0xff1e)  ligne n° 19		CMP R2,R0
-0480   emplacement : 65312  (0xff20)  ligne n° 20		JGE #BOUCLE-$-2 // Jump
-fff2   emplacement : 65314  (0xff22) 
-2000   emplacement : 65316  (0xff24)  ligne n° 21		LDQ 0x0000,R0
-6050   emplacement : 65318  (0xff26)  ligne n° 22		STW R0,@CNTMA
-ff00   emplacement : 65320  (0xff28) 
-0180   emplacement : 65322  (0xff2a)  ligne n° 23		JMP #BOUCLE-$-2 // Jump
-ffe8   emplacement : 65324  (0xff2c) 
-0950   emplacement : 65326  (0xff2e)  ligne n° 24	  JEA @MAIN_PRGA
-ff10   emplacement : 65328  (0xff30) 
+6080   emplacement : 65296  (0xff10)  ligne n° 15	    LDW R0, #IT_PROGA
+ff44   emplacement : 65298  (0xff12) 
+6050   emplacement : 65300  (0xff14)  ligne n° 16	    STW R0, @4*34
+0088   emplacement : 65302  (0xff16) 
+6f80   emplacement : 65304  (0xff18)  ligne n° 17	 	  LDW SP, #STACKA
+1000   emplacement : 65306  (0xff1a) 
+2000   emplacement : 65308  (0xff1c)  ligne n° 18	    LDQ 0,R0
+226f   emplacement : 65310  (0xff1e)  ligne n° 19	    LDQ SEUIL,R2
+6050   emplacement : 65312  (0xff20)  ligne n° 20	    STW R0,@CNTMA
+ff00   emplacement : 65314  (0xff22) 
+6050   emplacement : 65316  (0xff24)  ligne n° 21	    STW R0,@CNTIA
+ff02   emplacement : 65318  (0xff26) 
+0700   emplacement : 65320  (0xff28)  ligne n° 22	    ENI
+6050   emplacement : 65322  (0xff2a)  ligne n° 25	    STW R0,@CNTMA
+ff00   emplacement : 65324  (0xff2c) 
+60d0   emplacement : 65326  (0xff2e)  ligne n° 26	    LDW R0,@CNTMA
+ff00   emplacement : 65328  (0xff30) 
+3010   emplacement : 65330  (0xff32)  ligne n° 27		  ADQ 16,R0
+4f20   emplacement : 65332  (0xff34)  ligne n° 28		  CMP R2,R0
+0480   emplacement : 65334  (0xff36)  ligne n° 29		  JGE #BOUCLE-$-2 // Jump
+fff2   emplacement : 65336  (0xff38) 
+2000   emplacement : 65338  (0xff3a)  ligne n° 30		  LDQ 0x0000,R0
+0180   emplacement : 65340  (0xff3c)  ligne n° 31		  JMP #BOUCLE-$-2 // Jump
+ffec   emplacement : 65342  (0xff3e) 
+0950   emplacement : 65344  (0xff40)  ligne n° 32	    JEA @MAIN_PRGA
+ff10   emplacement : 65346  (0xff42) 
+604f   emplacement : 65348  (0xff44)  ligne n° 35	    STW R0, -(SP)
+60d0   emplacement : 65350  (0xff46)  ligne n° 36	    LDW R0,@CNTIA
+ff02   emplacement : 65352  (0xff48) 
+3002   emplacement : 65354  (0xff4a)  ligne n° 37	    ADQ 2,R0
+6050   emplacement : 65356  (0xff4c)  ligne n° 38	    STW R0,@CNTIA
+ff02   emplacement : 65358  (0xff4e) 
+60bf   emplacement : 65360  (0xff50)  ligne n° 39	    LDW R0,(SP)+
+0300   emplacement : 65362  (0xff52)  ligne n° 40	    RTI
